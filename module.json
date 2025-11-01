@@ -1,31 +1,30 @@
 {
-  "id": "module",
-  "title": "New Module",
+  "id": "cloaks-and-capes-free-collection",
+  "title": "Cloak & Capes - The Free Collection",
   "description": "",
-  "version": "#{VERSION}#",
-  "library": "false",
-  "manifestPlusVersion": "1.2.0",
-  "compatibility": {
-    "minimum": 10,
-    "verified": 10,
-    "maximum": 11
-  },
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "Cloak & Capes TTPRG",
+      "url": "https://https://www.patreon.com/c/CloaksandCapes"
+    },
+    {
+      "name": "Iain Fielding",
+      "discord": "Sogrom"
     }
   ],
-  "relationships": {
-    "systems": [],
-    "requires": []
+  "media": [
+    {
+      "type": "icon",
+      "url": "modules/cloak-and-capes-free-collection/assets/other/cloakandcapes-logo-webp"
+    }
+  ],
+  "version": "#{VERSION}#",
+  "compatibility": {
+    "minimum": 13,
+    "verified": 13
   },
   "esmodules": [
     "scripts/module.js"
-  ],
-  "scripts": [
-    "scripts/lib/lib.js"
   ],
   "styles": [
     "styles/module.css"
@@ -34,18 +33,166 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "languages/en.json"
+      "path": "lang/en.json"
     }
   ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.1.0"
+        }
+      }
+    ],
+    "requires": []
+  },
+"packs": [
+    {
+      "name": "content",
+      "label": "Cloak & Capes - The Free Collection",
+      "path": "packs/content",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    },
+    {
+      "name": "items",
+      "label": "Items (C&C)",
+      "path": "packs/items",
+      "type": "Item",
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "weapon",
+            "equipment",
+            "consumable",
+            "tool",
+            "loot",
+            "feat",
+            "container"
+          ]
+        }
+      },
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "spells",
+      "label": "Spells (C&C)",
+      "path": "packs/spells",
+      "type": "Item",
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "sorting": "m",
+          "types": [
+            "spell"
+          ]
+        }
+      },
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "actors",
+      "label": "Actors (C&C)",
+      "path": "packs/actors",
+      "type": "Actor",
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "sorting" : "m"
+        }
+      },
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "classes",
+      "label": "Classes & Subclasses (C&C)",
+      "path": "packs/classes",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    },
+    {
+      "name": "rolltables",
+      "label": "Roll Tables (C&C)",
+      "path": "packs/rolltables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    },
+    {
+      "name": "macros",
+      "label": "Macros (C&C)",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    },
+    {
+      "name": "scenes",
+      "label": "Battle Maps (C&C)",
+      "path": "packs/scenes",
+      "type": "Scene",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    }
+  ],
+	"packFolders": [
+		{
+			"name": "Cloak & Capes - The Free Collection",
+			"color": "#a428e6",
+			"sorting": "m",
+			"packs": [
+				"content",
+        "items",
+				"spells",
+				"classes",
+        "actors",
+        "rolltables",
+        "macros",
+        "scenes"
+			]
+		}
+	],
+  "flags": {
+    "hotReload": false,
+    "canUpload": true,
+		"dnd5e": {
+			"sourceBooks": {
+				"Cloak & Capes": "Cloak & Capes"
+			}
+		} 
+  },
   "url": "#{URL}#",
   "manifest": "#{MANIFEST}#",
   "download": "#{DOWNLOAD}#",
   "license": "LICENSE",
-  "readme": "README.md",
-  "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
-  ]
+  "readme": "README.md"
 }
