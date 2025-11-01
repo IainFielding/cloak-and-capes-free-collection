@@ -105,7 +105,7 @@
     },
     {
       "name": "actors",
-      "label": "Actors (C&C)",
+      "label": "Monsters (C&C)",
       "path": "packs/actors",
       "type": "Actor",
       "system": "dnd5e",
@@ -167,7 +167,7 @@
 	"packFolders": [
 		{
 			"name": "Cloak & Capes - The Free Collection",
-			"color": "#a428e6",
+			"color": "#202548",
 			"sorting": "m",
 			"packs": [
 				"content",
